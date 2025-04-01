@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate smart, inclusive side hustle ideas for any skill, time, or budget">
+    <title>Side Hustle Idea Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Side Hustle Idea Generator</h1>
+        <p>Find your perfect gig, no matter your skills or schedule!</p>
+    </header>
+    <main>
+        <form id="side-hustle-form">
+            <label>Time Available (hours/week):</label>
+            <select name="time">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20+</option>
+            </select>
+            <label>Skill or Interest:</label>
+            <select name="skill">
+                <option value="writing">Writing</option>
+                <option value="art">Art</option>
+                <option value="tech">Tech</option>
+                <option value="sales">Sales</option>
+                <option value="crafts">Crafts</option>
+                <option value="people">People Skills</option>
+                <option value="hobbies">Hobbies</option>
+                <option value="none">None</option>
+            </select>
+            <label>Budget to Start:</label>
+            <select name="budget">
+                <option value="0">$0</option>
+                <option value="50">$1-$50</option>
+                <option value="100">$50+</option>
+            </select>
+            <label>Experience Level:</label>
+            <select name="difficulty">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="side-hustle-result" class="result"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
