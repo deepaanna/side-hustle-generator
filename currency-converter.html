@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert currencies across countries with real-time rates. Free finance tool!">
+    <meta name="keywords" content="currency converter, exchange rates, multi-country finance tool">
+    <title>Currency Converter - Efficiency Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Currency Converter</h1>
+        <p>Convert money across borders instantly!</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <form id="currency-form">
+            <label>From Currency:</label>
+            <select name="from-currency">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+            </select>
+            <label>To Currency:</label>
+            <select name="to-currency">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+            </select>
+            <label>Amount:</label>
+            <input type="number" name="amount" placeholder="Enter amount" required>
+            <button type="submit">Convert</button>
+        </form>
+        <div id="currency-result" class="result">
+            <p id="loading" style="display: none;">Fetching latest rates...</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Efficiency Tools | <a href="https://x.com/deepanna" target="_blank">Follow on X</a></p>
+    </footer>
+    <script src="currency-converter.js"></script>
+</body>
+</html>

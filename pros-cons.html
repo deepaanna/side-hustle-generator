@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Make smarter decisions with our free Pros and Cons Tool—analyze benefits, drawbacks, and more to decide with confidence.">
+    <meta name="keywords" content="pros and cons tool, decision maker, decision making tool, weigh options">
+    <title>Pros and Cons Decision Tool - Efficiency Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pros and Cons Decision Tool</h1>
+        <p>Weigh your options and decide with clarity!</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <form id="pros-cons-form">
+            <label>Your Decision (e.g., "Should I start a side hustle?"):</label>
+            <input type="text" name="decision" placeholder="Enter your decision" required>
+            <label>Category:</label>
+            <select name="category">
+                <option value="career">Career</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="finance">Finance</option>
+                <option value="other">Other</option>
+            </select>
+            <label>Your Pros (optional, comma-separated):</label>
+            <input type="text" name="user-pros" placeholder="e.g., More income, Flexibility">
+            <label>Your Cons (optional, comma-separated):</label>
+            <input type="text" name="user-cons" placeholder="e.g., Time, Stress">
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="pros-cons-result" class="result"></div>
+    </main>
+    <footer>
+        <p>© 2025 Efficiency Tools | <a href="https://x.com/deepanna" target="_blank">Follow on X</a></p>
+    </footer>
+    <script src="pros-cons.js"></script>
+</body>
+</html>

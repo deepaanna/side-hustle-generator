@@ -46,6 +46,44 @@ p {
     text-align: center;
 }
 
+.tool-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tool-card {
+    background: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: transform 0.2s;
+}
+
+.tool-card:hover {
+    transform: scale(1.05);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -131,6 +169,28 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.result h4 {
+    color: #007bff;
+    margin: 15px 0 5px;
+}
+
+.timer {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.stop-btn {
+    background-color: #dc3545;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.stop-btn:hover {
+    background-color: #c82333;
 }
 
 @keyframes fadeIn {

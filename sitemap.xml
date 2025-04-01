@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://deepaanna.github.io/side-hustle-generator/</loc>
+        <loc>https://myefficiencyhub.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/side-hustle.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/packing-list.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/workout.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/pros-cons.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/pomodoro.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/currency-converter.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/bmi-calculator.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/tax-calculator.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://myefficiencyhub.com/unit-converter.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
 </urlset>

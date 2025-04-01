@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate a smart minimalist packing list for any trip—customized by length, weather, type, and more. Free tool with travel tips!">
+    <meta name="keywords" content="packing list generator, minimalist packing, travel packing list, travel tools, trip planner">
+    <title>Minimalist Packing List Generator - Efficiency Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Minimalist Packing List Generator</h1>
+        <p>Pack light, travel smart—customized for you!</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <form id="packing-list-form">
+            <label>Trip Length (days):</label>
+            <select name="length">
+                <option value="3">1-3</option>
+                <option value="7">4-7</option>
+                <option value="14">8-14</option>
+                <option value="30">15+</option>
+            </select>
+            <label>Weather:</label>
+            <select name="weather">
+                <option value="warm">Warm (Tropical/Summer)</option>
+                <option value="cold">Cold (Winter)</option>
+                <option value="mixed">Mixed (Variable)</option>
+            </select>
+            <label>Trip Type:</label>
+            <select name="type">
+                <option value="vacation">Vacation/Leisure</option>
+                <option value="business">Business</option>
+                <option value="adventure">Adventure/Outdoor</option>
+            </select>
+            <label>Gender (for clothing):</label>
+            <select name="gender">
+                <option value="unisex">Unisex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="packing-list-result" class="result"></div>
+    </main>
+    <footer>
+        <p>© 2025 Efficiency Tools | <a href="https://x.com/deepanna" target="_blank">Follow on X</a></p>
+    </footer>
+    <script src="packing-list.js"></script>
+</body>
+</html>

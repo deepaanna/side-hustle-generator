@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert units for travel, fitness, and finance across countries. Free and easy tool!">
+    <meta name="keywords" content="unit converter, currency converter, miles to kilometers, pounds to kilograms">
+    <title>Unit Converter - Efficiency Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Unit Converter</h1>
+        <p>Convert units for travel, fitness, and finance!</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <form id="unit-form">
+            <label>Conversion Type:</label>
+            <select name="unit-type">
+                <option value="distance">Miles to Kilometers</option>
+                <option value="weight">Pounds to Kilograms</option>
+                <option value="energy">Calories to Kilojoules</option>
+                <option value="currency-usd-gbp">USD to GBP</option>
+                <option value="currency-gbp-usd">GBP to USD</option>
+                <option value="currency-usd-cad">USD to CAD</option>
+            </select>
+            <label>Value:</label>
+            <input type="number" name="unit-input" placeholder="Enter value" required>
+            <button type="submit">Convert</button>
+        </form>
+        <div id="unit-result" class="result">
+            <p id="loading" style="display: none;">Fetching latest rates...</p>
+        </div>
+        <div id="unit-result" class="result"></div>
+    </main>
+    <footer>
+        <p>© 2025 Efficiency Tools | <a href="https://x.com/deepanna" target="_blank">Follow on X</a></p>
+    </footer>
+    <script src="unit-converter.js"></script>
+</body>
+</html>

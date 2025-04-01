@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate custom micro-workouts for any schedule—tailored by time, focus, equipment, and intensity. Free fitness tool with daily tips!">
+    <meta name="keywords" content="workout generator, micro workouts, daily fitness, exercise tools, home workouts">
+    <title>Daily Micro-Workout Generator - Efficiency Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Micro-Workout Generator</h1>
+        <p>Get fit in minutes—customized for you!</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <form id="workout-form">
+            <label>Time Available (minutes):</label>
+            <select name="time">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <label>Focus:</label>
+            <select name="focus">
+                <option value="full">Full Body</option>
+                <option value="core">Core</option>
+                <option value="upper">Upper Body</option>
+                <option value="lower">Lower Body</option>
+            </select>
+            <label>Equipment:</label>
+            <select name="equipment">
+                <option value="none">None</option>
+                <option value="basic">Basic (Dumbbells, Band)</option>
+            </select>
+            <label>Intensity:</label>
+            <select name="intensity">
+                <option value="low">Low (Beginner)</option>
+                <option value="high">High (Advanced)</option>
+            </select>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="workout-result" class="result"></div>
+    </main>
+    <footer>
+        <p>© 2025 Efficiency Tools | <a href="https://x.com/deepanna" target="_blank">Follow on X</a></p>
+    </footer>
+    <script src="workout.js"></script>
+</body>
+</html>
