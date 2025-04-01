@@ -4,26 +4,58 @@ body {
     padding: 20px;
     text-align: center;
     background-color: #f9f9f9;
+    line-height: 1.6;
 }
 
 header {
+    background: linear-gradient(135deg, #007bff, #00c4ff);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
     margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color: #333;
+    margin: 0;
+    font-size: 2.5em;
 }
 
 p {
-    color: #666;
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.intro h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.ad-container {
+    margin: 20px auto;
+    max-width: 728px;
+    text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
+    gap: 20px;
+    max-width: 450px;
     margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 label {
@@ -32,7 +64,7 @@ label {
 }
 
 select, button {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -43,6 +75,8 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -50,21 +84,56 @@ button:hover {
 }
 
 .result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: left;
-    max-width: 500px;
+    margin-top: 30px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .result ul {
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .result li {
+    background: #fff;
+    padding: 15px;
     margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.result li strong {
+    color: #007bff;
+    font-size: 1.1em;
+}
+
+.result li button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f0f0f0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

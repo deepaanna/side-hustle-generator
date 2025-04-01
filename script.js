@@ -1,3 +1,5 @@
+let hustleCount = parseInt(localStorage.getItem('hustleCount')) || 0;
+
 document.getElementById('side-hustle-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const time = parseInt(this.time.value);
@@ -88,7 +90,17 @@ document.getElementById('side-hustle-form').addEventListener('submit', function(
         ]
     };
 
-    // Filter by time, budget, and difficulty
+    // Tips for daily retention
+    const tips = [
+        'Start small—test your hustle for a week before scaling!',
+        'Track your earnings weekly to stay motivated.',
+        'Join online communities (e.g., Reddit) for hustle tips.',
+        'Set aside 10% of earnings for reinvestment.',
+        'Use free tools like Canva to market your gig.'
+    ];
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+
+    // Filter hustles
     let filteredHustles = sideHustles[skill].filter(hustle => 
         hustle.timeEffort <= time && 
         hustle.cost <= budget && 
@@ -97,25 +109,74 @@ document.getElementById('side-hustle-form').addEventListener('submit', function(
     if (filteredHustles.length === 0) {
         filteredHustles = sideHustles[skill].filter(hustle => 
             hustle.timeEffort <= time && hustle.cost <= budget
-        ).slice(0, 1); // Fallback to closest match
+        ).slice(0, 1); // Fallback
     }
-    filteredHustles.sort(() => Math.random() - 0.5); // Shuffle
+    filteredHustles.sort(() => Math.random() - 0.5);
     const maxResults = time === 5 ? 1 : time === 10 ? 2 : 3;
     const selectedHustles = filteredHustles.slice(0, maxResults);
 
-    // Generate rich response
-    const output = selectedHustles.map(hustle => `
+    // Generate output with save and share options
+    const output = selectedHustles.map((hustle, index) => `
         <li>
             <strong>${hustle.name}</strong> (Est. Earnings: ${hustle.earnings})<br>
             <em>Startup Cost:</em> $${hustle.cost} | <em>Time:</em> ${hustle.timeEffort} hrs/wk | <em>Level:</em> ${hustle.difficulty}<br>
             ${hustle.desc}<br>
-            <em>Why it’s great:</em> ${hustle.why}
+            <em>Why it’s great:</em> ${hustle.why}<br>
+            <button onclick="saveFavorite('${hustle.name}')">Save to Favorites</button>
         </li>
     `).join('');
 
+    // Add results with tip and share
     document.getElementById('side-hustle-result').innerHTML = `
         <h3>Your Tailored Side Hustles:</h3>
         <ul>${output}</ul>
         <p><em>Matched to ${time} hrs/wk, $${budget} budget, and ${difficulty}-level ${skill} skills!</em></p>
+        <p><strong>Daily Tip:</strong> ${randomTip}</p>
+        <button onclick="shareResults()">Share Your Hustles</button>
+        <div id="favorites-list"></div>
+    `;
+    
+    hustleCount += selectedHustles.length;
+    localStorage.setItem('hustleCount', hustleCount);
+    document.getElementById('side-hustle-result').innerHTML = `
+        <h3>Your Tailored Side Hustles:</h3>
+        <ul>${output}</ul>
+        <p><em>Matched to ${time} hrs/wk, $${budget} budget, and ${difficulty}-level ${skill} skills!</em></p>
+        <p><strong>Daily Tip:</strong> ${randomTip}</p>
+        <p><strong>Hustles Explored:</strong> ${hustleCount}</p>
+        <button onclick="shareResults()">Share Your Hustles</button>
+        <div id="favorites-list"></div>
     `;
 });
+
+// Save favorites to local storage
+function saveFavorite(hustleName) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.includes(hustleName)) {
+        favorites.push(hustleName);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+    displayFavorites();
+}
+
+// Display saved favorites
+function displayFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    document.getElementById('favorites-list').innerHTML = favorites.length > 0 
+        ? `<h4>Saved Favorites:</h4><ul>${favorites.map(f => `<li>${f}</li>`).join('')}</ul>` 
+        : '';
+}
+
+// Share results
+function shareResults() {
+    const url = window.location.href;
+    const text = `Check out my tailored side hustles from the Side Hustle Idea Generator! ${url}`;
+    if (navigator.share) {
+        navigator.share({ title: 'My Side Hustles', text, url });
+    } else {
+        prompt('Copy this to share:', text);
+    }
+}
+
+// Load favorites on page load
+window.onload = displayFavorites;
